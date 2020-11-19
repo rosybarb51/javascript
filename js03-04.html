@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 3-4</title>
+    <script>
+        // break문과 contiunue 문 
+        // break : 소스 코드 실행 시 break 문을 만나게 되면 실행중인 코드블럭에서 즉시 탈출
+        // continue : 소스 코드를 실행 시 continue 문을 만나게 되면 현재 실행중인 루프를 중지하고 다음 루프를 시작함.
+
+        console.log("---------break-----------");
+        for (var i =0; i < 10; i++) {
+            if ( i == 5) {
+                break;
+            }
+            console.log("현재 i의 값은" + i + "입니다.");
+        }
+
+
+        console.log("---------continue---------");
+        for (var i =0; i < 10; i++) {
+            if ( i == 5) {
+                continue;
+            }
+            console.log("현재 i의 값은" + i + "입니다.");
+        }
+
+
+
+        console.log("\n---------break 구구단---------\n");
+
+        var dan = prompt("출력할 구구단 단수를 입력하세요", "5");
+        var stop = prompt("출력을 멈출 곳을 입력하세요","6");
+
+        for (var i = 1; i < 10; i++) {
+            if ( i == stop) {
+                break;
+            }
+            console.log(dan + " * " + i + " = " + (dan  * i));
+        }
+
+        console.log("\n---------continue 구구단---------\n");
+
+
+        for (var i = 1; i < 10; i++) {
+            if ( i == stop) {
+                continue;
+            }
+            console.log(dan + " * " + i + " = " + (dan  * i));
+        }
+        //  
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

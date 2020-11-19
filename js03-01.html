@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 3-1</title>
+    <script>
+        // var fruits = "사과";
+        // var price = 0;
+
+
+        // // 밑에서 어떤 break를 만나도 switch 블럭에서 탈출함
+        // switch(fruits) {
+        //     case "바나나":
+        //     price = 200;
+        //     break;
+
+        //     case "사과":
+        //     price = 300;
+        //     break;
+
+        //     case "체리":
+        //     price = 400;
+        //     break;
+
+        //     // case에 원하는 것이 없을 경우 실행
+        //     // else if 문의 else 문과 동일
+        //     // 모든 case를 다 입력 시, 생략 가능
+        //     default:
+        //     console.log("팔지 않습니다.");
+        //     price = 0;
+        // }
+
+        // console.log(0);
+
+
+        // console.log("----------------------------");
+
+        // fruits = "사과";
+        // price = 0;
+
+        // if (fruits == "바나나") {
+        //     pirce = 200;
+        // }
+        // else if (fruits == "사과") {
+        //     price = 300;
+        // }
+        // else if (fruits == "체리") {
+        //     price = 400;
+        // }
+        // else {
+        //     price = 0;
+        //     console.log("팔지 않습니다.");
+        // }
+
+        // console.log(price);
+
+        // console.log("-----------------------");
+
+        // // new Date() 는 자바스크립트에 미리 만들어진 날짜와 관련된 객체.
+        // // .getDay();는 오늘 날짜 가져오는 것
+        // // new Date().getDay(); 오늘 날짜의 요일을 0 ~ 6으로 표현해 줌. 0은 일요일 6은 토요일
+        // var day = new Date().getDay();
+        // var toDay = "";
+
+        // // 실행 시 break를 만나면 실행코드를 중단하고switch 문에서 탈출
+        // // break 문을 일부러 빼는 경우도 있다. 그러나 else if가 더 편하다. 
+        // // switch case 문은 헷갈린다.. 
+
+        // switch (day) {
+        //     case 1:
+        //     toDay = "월요일";
+        //     // break;
+
+        //     case 2:
+        //     toDay = "화요일";
+        //     // break;
+            
+        //     case 3:
+        //     toDay = "수요일";
+        //     // break;
+
+        //     case 4:
+        //     toDay = "목요일";
+        //     // break;
+
+        //     case 5:
+        //     toDay = "금요일";
+        //     break;
+
+        //     default:
+        //     toDay = "주말";
+        //     break;
+
+        // }
+
+        // console.log("오늘은 " + toDay + "입니다.");
+
+        // 문제 1) 위의 요일 입력하는 부분을 사용자가 날짜를 입력하면 해당하는 요일이 출력되는 프로그램을 작성하세요.
+        // else if 문으로 작성하세요.
+        // 사용자 입력 방식은 2020-11-17
+
+
+        console.log("\n------- 문제 1) -------\n");
+
+        var day1 = prompt("<요일 알림> \n날짜를 입력해 주세요.", "2020-11-17");
+        var day2 = new Date(day1).getDay();
+        if (day2 == 1) {
+            console.log("입력한 날은 월요일입니다.");
+        }
+        else if (day2 == 2) {
+            console.log("입력한 날은 화요일입니다.");
+        }
+        else if (day2 == 3) {
+            console.log("입력한 날은 수요일입니다.");
+        }
+        else if (day2 == 4) {
+            console.log("입력한 날은 목요일입니다.");
+        }
+        else if (day2 == 5) {
+            console.log("입력한 날은 금요일입니다.");
+        }
+        else {
+            console.log("입력한 날은 주말입니다.");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 2-4</title>
+    <script>
+        // 조건문 반복문 함수
+        // 프로그램 내부에서 어떠한 조건에 의하여 그 결과값에 따라 프로그램의 실행 여부가 판단되는 명령어
+        // if문, switch ~ case 문(얘가 속도가 더 빠름)
+
+        // if : 주어진 조건이 논리적으로 true 인지 false 인지 판단하여 아래의 코드블럭을 실행하는 조건문
+        // (코드 블럭 : 소스 코드의 묶음 { } 로 표시함)
+        // if문은 총 3가지 형태
+        // 1. if문 : 조건이 참일 경우 아래의 코드블럭을 실행함, 거짓일 경우 실행하지 않고 종료
+        // 2. if ~ else문 : 조건이 참일 경우 아래의 코드블럭을 실행하고, 거짓일 경우 else 코드블럭을 실행하는 조건문, 2가지 경우 중 하나를 무조건 실행, 조건 연산자의 기능을 대체할 수 있음
+        // 3. if ~ elseif ~ else문 : 조건을 여러개 사용하고 첫번 째 조건이 참일 경우 바로 아래의 코드블럭을 실행하고, 거짓일 경우 다음 조건을 통해 참인지 거짓인지를 판별, 여러개의 조건을 사용하기 때문에 조건이 거짓일 경우 계속 다른 조건을 비교하여 조건에 해당하는 코드블럭을 실행함, 마지막 조건도 false일 경우 else의 코드블럭을 실행함, 필요 시 else 부분을 생략할 수 있음
+
+        console.log("\n------ 조건문 ------\n");
+        var score = 90;
+        var myScore = prompt("점수를 입력하세요.");
+
+        if (myScore > score) {
+            console.log("A+ 학점을 축하합니다.");
+        }
+
+        console.log("당신의 점수는 " + myScore + "점 입니다.");
+
+        console.log("-------------------------------------------")
+
+        var result  = prompt("당신은 붕어빵을 먹을 때 머리부터 먹습니까? 꼬리부터 먹습니까?");
+
+        if (result == "머리") {
+            console.log("당신은 머리부터 먹습니다.");
+        }
+        else { 
+            console.log("당신은 꼬리부터 먹습니다.");
+        }
+
+
+        console.log("-------------------------------")
+        // else if 문
+        var mscore = prompt("당신의 점수를 입력하세요", "80");
+
+        // 주의점 
+        // 조건을 차례대로 입력 시 조건 검색 값을 순서대로 입력해야함
+        // 상위 조건이 참이면 하위 조건은 무시함. 
+
+        if (mscore >= 90) {
+            console.log("당신의 점수는 " + mscore + "점 이고, A+학점 입니다.");
+        }
+        else if (mscore >= 80) {
+            console.log("당신의 점수는 " + mscore + "점 이고, B+학점 입니다.");
+        }
+        else if (mscore >= 70) {
+            console.log("당신의 점수는 " + mscore + "점 이고, C+학점 입니다.");
+        }
+        else if (mscore >= 60) {
+            console.log("당신의 점수는 " + mscore + "점 이고, D+학점 입니다.");
+        }
+
+        // 60점 이하 부분 
+        else {
+            console.log("당신의 점수는 " + mscore + "점 이고, F학점 입니다.");
+        }
+        
+
+        // 문제 1) 중국집에 가서 먹고 싶은 메뉴를 선택하는 프로그램을 작성하세요.
+        // 5가지 음식을 하나씩 비교
+        // else if 문을 사용하여 만드세요. 
+        // 자장면, 짬뽕, 볶음밥, 잡채밥, 우동
+        // 사용자 입력 부분 필수, 출력 부분은 
+        // "사장님 XXX 주세요."
+
+        console.log("\n----------------------------\n")
+
+        var res1 = prompt("네, 중국집입니다. 뭐 드릴까요? \n(자장면, 짬뽕, 볶음밥, 잡채밥, 우동 中 1 택)");
+
+        if (res1 == "자장면") {
+            console.log("네, 자장면 얼른 가져다 드릴게요.");
+        }
+        else if (res1 == "짬뽕") {
+            console.log("네, 짬뽕 얼른 가져다 드릴게요.");
+        }
+        else if (res1 == "볶음밥") {
+            console.log("네, 볶음밥 얼른 가져다 드릴게요.");
+        }
+        else if (res1 == "잡채밥") {
+            console.log("네, 잡채밥 얼른 가져다 드릴게요.");
+        }
+        else {
+            console.log("네, 우동 얼른 가져다 드릴게요.");
+        }
+        
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

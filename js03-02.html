@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 3-2</title>
+    <script>
+        // 반복문 
+        // for (for ~ in), while, do ~ while
+        // 자바스크립트에서 특정한 코드블럭을 반복적으로 실행할 때 사용하는 명령어
+        // for 문 : 반복 조건이 거짓으로 판단될 때까지 코드블럭을 반복 실행하는 반복문
+        // 초기화변수, 반복조건, 변수의 카운트까지 한 곳에 입력하여 설정하는 방식
+        
+        // for (초기화변수; 반복조건; 변수카운트) 
+        // {
+        //      반복 실행될 소스 코드;
+        // }
+
+        // for 문 쓸 때 var i = 0; 쓰고 시작함.. 
+        for (var i = 0; i < 10; i++) {
+            console.log(i);
+        }
+
+        console.log("\n-------------------\n");
+        var result = 0;
+        for (var i = 1; i <= 10; i++) {
+            result = result + i;
+        }
+
+        console.log(result);
+
+        console.log("\n-------------------\n");
+
+        for (var size = 10; size <= 35; size +=5) {
+
+            //아래와 같이 < >을 나누어서 사용가능  ?????
+            // <span 뒤에 "에 이어서 style = 'font-size:" 여기까지 한 문장
+            // <span style = "font-size : 10px">
+            document.write("<span ");
+            document.write("style = 'font-size:" + size + "px'>");
+            document.write(size + "px");
+            document.write("</span>");
+        }
+
+
+        console.log("\n-----------------\n");
+        // 구구단 만들기
+
+        var dan = 5;
+
+        for (var i = 1; i < 10; i++) {
+            console.log(dan + " * " + i + " = " + (dan * i));
+        }
+
+
+        // 문제 2) 사용자 입력을 통해서 원하는 단수의 구구단을 출력하세요.
+
+        console.log("\n------ 문제 2) 사용자 입력 구구단 출력 ------\n");
+        
+        var input1 = prompt("<내가 원하는 구구단 보기>\n원하는 단수를 입력해주세요.", "3");
+
+        for (var i = 1; i < 10; i++) {
+            console.log(input1 + " * " + i + " = " + (input1 * i));
+        }
+
+        
+        // 문제 3) 아래의 형태를 출력하는 프로그램을 작성하세요.
+        // for 문을 사용하여 출력하세요.
+        // * 는 문자열임
+        // *
+        // **
+        // ***
+        // ****
+        // *****
+
+        console.log("\n------ 문제 3) * ------\n");
+
+        var star1 = "*";
+        
+        for (var i = 1; i <= 5; i++) {
+            console.log(star1.repeat(i));
+        }
+
+        console.log("\n------ 문제 3) * 다른 방법 ------\n");
+
+        // for 구문 밖에 외부 저장소 만든 것 
+        // 변수에는 제약이 없음. 어떤 데이터 타입도 가능
+        // 자바스크립트의 변수는 자동 추론 방식
+
+        // var result; -> undefined 타입. 타입이 없음. undefined 타입과 연산을 진행할 경우 오류가 발생할 가능성이 높음
+        var result = ""; // 변수 result에 빈 문자열이 저장되면서 데이터 자체는 비어있지만 변수의 타입이 문자열 타입으로 변경됨
+        
+        for (var i = 0; i < 5; i++) {
+            result = result + "*";
+            console.log(result);
+        }
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

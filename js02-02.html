@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 2-2</title>
+    <script>
+        var x = 32;
+        var total = 100 + x * 2 / 4 - 3;
+        var div = 32 / 10;
+        var mod = x % 2;
+
+        console.log("x : " + x);
+        console.log("100 + x * 2 / 4 -3 = " + total);
+        console.log("32 / 10 = " + div);
+        console.log("x % 2 = " + mod);
+
+        console.log(10 % 3);
+
+        var y = prompt("숫자를 입력하세요");
+        var result = y % 2;
+
+        // 비교연산자(3항연산자) 대신 사용하는 if문
+        if (result == 0) {
+            console.log("입력한 숫자가 짝수입니다.");
+        }
+        else {
+            console.log("입력한 숫자가 홀수입니다.");
+        }
+
+
+        console.log("\n----- 증감 연산자 -----\n")
+
+        var a = 10;
+        console.log(a);
+        a ++; // 증감연산자로 값 1 추가 
+        console.log(a);
+        a --;
+        console.log(a);
+
+        console.log("\n----- 전위 연산 -----\n");
+        // 전위연산자는 다른 연산자와 하나의 라인에 같이 있을 경우 가장 먼저 연산을 진행하고 다른 연산자와 연산을 함
+        // 후위연산자는 다른 연산자와 하나의 라인에 같이 있을 경우 다른 연산자와 연산을 진행한 후 연산을 함
+        // 전위 연산자나 후위연산자가 한 라인에 혼자서 사용될 경우는 아무런 상관없다. 
+        // ->반복문들어갈 때 전위연산자, 후위연산자 많이 써서 개념 확실히 알고 가자. 
+
+        var test = 10;
+        // 변수test 출력
+        console.log(test);
+        // 변수test를 전위증가연산자로 연산하면서 출력
+        console.log(++test);
+        // 전위증가연산자로 연산이 완료된 후 변수 test 출력
+        console.log(test);
+        // 변수test를 전위감소연산자로 연산하면서 출력
+        console.log(--test);
+        // 전위감소연산자로 연산이 완료된 후 변수 test 출력
+        console.log(test);
+
+        console.log("\n----- 후위 연산 -----\n");
+        
+        var test2 = 10;
+        console.log(test2);
+        // 변수 test2를 후위증가연산자로 연산하면서 출력
+        console.log(test2++);
+        // 후위증가연산자로 연산이 종료 된 후 변수 teste2의 값 출력
+        // 화면에 먼저 출력, 다음 줄로 넘어가기 직전에 후위연산자 실행. 그래서 위의 값인 10을 그대로 받고, 다음줄에 11로 넘겨준다...
+        console.log(test2);
+        // 변수 test2를 후위감소연산자로 연산하면서 출력
+        console.log(test2--);
+        // 후위감소연산자로 연산이 종료 된 후 변수 teste2의 값 출력
+        console.log(test2);
+        // 변수 test2를 후위감소연산자로 연산하면서 출력
+        
+        console.log("\n----- 대입 연산자 ------\n");
+
+        var x = 3;
+        var y = 3;
+        var z = 3;
+
+        console.log("x = " + x + ", y = " + y + ", z = " + z);
+
+        x += 3;
+        y *= 3;
+        z % 2;
+
+        console.log("x +=3; 실행 후, x = " + x);
+        console.log("y *= 3; 실행 후, y = " + y);
+        console.log("z % 2; 실행 후, z = " + z);
+
+        console.log("\n----- 비교 연산자 ------\n");
+
+        var x = 13;
+        var y = 7;
+
+        console.log("x = " + x + ", y = " + y);
+        console.log("x == y : " +(x == y));
+        console.log("x != y : " +(x != y));
+        console.log("x >= y : " +(x >= y));
+        console.log("x > y : " +(x > y));
+        console.log("x <= y : " +(x <= y));
+        console.log("x < y : " +(x < y));
+
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

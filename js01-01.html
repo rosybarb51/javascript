@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 1-1</title>
+
+    <script>
+        // 자바스크립트 사용 방법
+        // 1. inline 방식
+            //html 태그에 직접 소스 코드 입력
+        // 2. script 태그 사용
+            //html 문서 내에 <script> 태그 사용 후 소스 코드 입력
+        // 3. 외부 자바스크립트 파일 로드
+                // 확장자 명이 js 인 파일을 생성 후 해당 파일에 소스 코드 입력
+                // 해당 파일을 <script> 태그를 통하여 로드하여 사용
+    
+
+    // script 태그 사용 방식 1번
+    // function :함수를 선언. 내가 작업해놓은 것에 대해. 뒤에 나오는 것이 작업 이름(함수명)
+    // obj : img태그를 이름을 obj로 바꾼것. 매개변수, 인자, 인수 ->통일해서 매개변수라고 하자. 
+    function over(obj) {
+        obj.src = "./images/cat02.jpg"
+    }
+
+    function out(obj) {
+        obj.src = "./images/cat03.jpg"
+    }
+    </script>
+
+    <!-- 3. 외부 자바스크립트 파일 로딩 1번 방식 -->
+    <script src="./lib.js"></script>
+</head>
+<body>
+    <h3>javascript 사용 방법</h3>
+    <h4>inline 방식</h4>
+    <img src="./images/cat01.jpg" alt="" onmouseover="this.src='./images/cat01.jpg'" onmouseout="this.src='./images/cat02.jpg'">
+
+    <br><hr><br>
+
+    <h4>script 태그 사용 방식 1번</h4>
+    <!-- onmouseover: 이벤트 css3의 hover 같은..뒤의 over(this)를 실행하란 말. this는 여기서 img태그  -->
+    <img src="./images/cat01.jpg" alt="" onmouseover="over(this)" onmouseout="out(this)">    
+
+    <hr>
+
+    <h4>script 태그 사용 방식 2번 방식</h4>
+    <!-- 요즘 이 방식 사용한다.  -->
+    <!-- img 태그에 id를 하나 주고, -->
+    <img id="img3" src="./images/cat01.jpg" alt="">
+
+
+    <br><hr><br>
+
+    <h4> 외부 자바스크립트 파일 로딩 1번 방식</h4>
+    <!-- 위에 over 라는 함수 이름이 있으니까, 또 쓸 때는 over2처럼 이름 안 겹치게 해주자!! -->
+    <img src="./images/cat01.jpg" alt="" onmouseover="over2(this)" onmouseout="out2(this)">
+
+    <hr>
+
+    <h4> 외부 자바스크립트 파일 로딩 2번 방식</h4>
+    <img id="img4" src="./images/cat01.jpg" alt="">
+
+
+    <script>
+        // var : 변수 선언
+        // document :html 문서 현재.
+        // getElementById() : id값이 괄호 안의 것인 html 태그찾기! 앞에 있는 현재 문서 내에서.
+        // ->이 한 줄로 img3가 html 태그가 됨. id가 img3인 태그를 찾는 태그.
+        var img3 = document.getElementById("img3");
+        var img4 = document.getElementById("img4");
+
+        // img3 위에서 등록한 태그
+        // add~ 이벤트 등록
+        // 괄호안에 마우스 오버라는 이벤트 등록 : 태그에 마우스가 올라갈 때
+        // function : 동작?.. 앞의 마우스 오버 이벤트가 동작되면 뒤의 img2.src~가 실행한다는 말.
+        img3.addEventListener("mouseover", function(){
+            img3.src = "./images/cat02.jpg"
+        });
+
+        img3.addEventListener("mouseout", function(){
+            img3.src = "./images/cat03.jpg"
+        });
+
+
+
+
+        // 이벤트 동작하는 부분이 들어가면, 바디끝에 외부파일 부르는 것을 놔둬야 동작한다. 
+        <script src="./lib.js"></script>
+        
+        
+        
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </script>
+
+
+
+</body>
+</html>

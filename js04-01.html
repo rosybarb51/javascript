@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 4-1</title>
+    <script>
+        // 다중 반복문
+        // 하나의 반복문 안에 또 다른 반복문을 사용하는 형태 
+
+        // for (첫 번째 초기화 변수; 첫 번째 반복조건; 첫 번째 카운트) {
+        //      첫 번째 for문에서 반복 실행할 소스코드
+        //      for (두 번째 초기화 변수; 두 번째 반복조건; 두 번째 카운트) {
+        //          두 번째 for문에서 반복 실행할 소스코드
+        //      }
+        //  }
+
+
+        // 2중 for문 : 외부의 for문 1번에 내부의 for문을 모두 실행
+        console.log("-------------------------");
+        for (var i = 0; i < 10; i++) {
+            console.log("첫 번째 for문의 i값 : " + i);
+            console.log("-------------------------");
+
+            for (var j = 0; j < 10; j++) {
+                console.log("두 번째 for문의 j값 : " + j);
+            }
+        }
+
+        // 문제 1) 위의 예제를 참고하여 아래와 같이 출력하는 프로그램을 작성하세요.
+        // i의 값 : x, j의 값 : y
+        // i의 값 : x1, j의 값 : y1
+        // 2중 for문을 통해서 출력
+
+        // i의 값 : 0, j의 값 : 0
+        // i의 값 : 0, j의 값 : 1
+        // i의 값 : 0, j의 값 : 2...
+
+        // i의 값 : 1, j의 값 : 0
+        // i의 값 : 1, j의 값 : 1...
+
+        // ...
+        // i의 값 : 9, j의 값 : 8
+        // i의 값 : 9, j의 값 : 9
+
+        console.log("\n문제 1) 2중 for문을 이용한 i, j 값 출력\n")
+
+        for (var i = 0; i < 10; i++) {
+            console.log("-------" + i + "번 째-------");
+            for (var j = 0; j < 10; j++) {
+                console.log("i의 값 : "+ i +", j의 값 : " + j);
+            }
+        }
+
+
+        // 문제 2) 2중 for 문을 사용하여 2단부터 9단까지 모든 구구단을 출력하는 프로그램을 작성하세요. 
+        
+        console.log("\n문제 2) 2중 for문을 이용한 구구단 출력\n")
+
+        for (var i = 2; i < 10; i++) {
+            console.log("-------<" + i + "단>-------");
+            for (var j = 1; j < 10; j++) {
+                console.log(i + " * " + j + " = " + (i * j));
+            }
+        }
+        
+        
+        // 문제 3) 구구단 전체를 while 문을 통해서 화면에 출력하는 프로그램을 작성하세요.
+
+        console.log("\n문제 2) 2중 while문을 이용한 구구단 출력\n")
+
+        var num1 = 2;
+        var num2 = 1;
+        while (num1 < 10) {
+            console.log("----<" + num1 + "단>----");
+            while (num2 < 10) { 
+                console.log(num1 + " * " + num2 + " = " + (num1 * num2));
+                
+                num2++
+            }
+
+            // num2를 1로 초기화 해줘야함!!!! while2문가 완전히 종료되면서 num2++ 때문에 num2는 10이 된 상태. 그래서 while2문을 나오면서 1로 초기화 해줘야 다음 단 수로 넘어갈 때 num2가 1부터 시작할 수 있음. 제일 처음 단수에는 num2가 while문 전체 밖에 있기 때문. 
+            // ->깔끔한 형태는 아님. 그냥 while1문 밖의 num2를 while1문 안, while2문 밖에 넣어주면 깔끔함. 이해하자.  
+            num2 = 1;
+            num1++
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
